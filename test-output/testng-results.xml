@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="RegressionSuite1" duration-ms="88949" started-at="2019-05-28T16:21:06Z" finished-at="2019-05-28T16:22:35Z">
+    <groups>
+    </groups>
+    <test name="Regression1" duration-ms="88949" started-at="2019-05-28T16:21:06Z" finished-at="2019-05-28T16:22:35Z">
+      <class name="com.raisin.demo.tests.RaisinTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.raisin.demo.tests.RaisinTests@68ad99fe]" name="setUp" is-config="true" duration-ms="3119" started-at="2019-05-28T16:21:06Z" finished-at="2019-05-28T16:21:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Test1()[pri:1, instance:com.raisin.demo.tests.RaisinTests@68ad99fe]" name="Test1" duration-ms="27500" started-at="2019-05-28T16:21:09Z" finished-at="2019-05-28T16:21:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test1 -->
+        <test-method status="PASS" signature="Test2()[pri:2, instance:com.raisin.demo.tests.RaisinTests@68ad99fe]" name="Test2" duration-ms="30268" started-at="2019-05-28T16:21:37Z" finished-at="2019-05-28T16:22:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test2 -->
+        <test-method status="PASS" signature="Test3(java.lang.String)[pri:2, instance:com.raisin.demo.tests.RaisinTests@68ad99fe]" name="Test3" duration-ms="25431" started-at="2019-05-28T16:22:07Z" data-provider="Test3" finished-at="2019-05-28T16:22:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[country-name-asc]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test3 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.raisin.demo.tests.RaisinTests@68ad99fe]" name="tearDown" is-config="true" duration-ms="2569" started-at="2019-05-28T16:22:33Z" finished-at="2019-05-28T16:22:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.raisin.demo.tests.RaisinTests -->
+    </test> <!-- Regression1 -->
+  </suite> <!-- RegressionSuite1 -->
+</testng-results>

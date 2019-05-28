@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+  
+<suite name="RegressionSuite1" parallel="tests">
+  <test name="Regression1"   >
+    <packages>
+      <package name="com.raisin.demo.tests" />
+   </packages>
+ </test>
+</suite>
