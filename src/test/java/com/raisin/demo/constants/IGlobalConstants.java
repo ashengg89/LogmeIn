@@ -21,7 +21,7 @@ public interface IGlobalConstants {
     String GECKO_DRIVER_PATH = GLOBAL_DRIVERS_FOLDER + File.separator + "geckodriver.exe";
 
     /** //src//test//resources//drivers//chromedriver.exe. */
-    String CHROME_DRIVER_PATH = GLOBAL_DRIVERS_FOLDER + File.separator + "chromedriver.exe";
+    String CHROME_DRIVER_PATH = GLOBAL_DRIVERS_FOLDER + File.separator + "chromedriver";
     
     /** //src//test//resources//drivers//IEDriverServer.exe. */
     String IE_DRIVER_PATH = GLOBAL_DRIVERS_FOLDER + File.separator + "IEDriverServer.exe";

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-RegressionSuite1">
-              <span class="suite-name border-passed">RegressionSuite1</span>
+              <span class="suite-name border-failed">RegressionSuite1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-RegressionSuite1" class="hide-methods failed suite-RegressionSuite1"> (hide)</a> <!-- hide-methods failed suite-RegressionSuite1 -->
+                      <a href="#" panel-name="suite-RegressionSuite1" class="show-methods failed suite-RegressionSuite1"> (show)</a> <!-- show-methods failed suite-RegressionSuite1 -->
+                    </span>
+                    <div class="method-list-content failed suite-RegressionSuite1">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite1" title="com.raisin.demo.tests.RaisinTests" hash-for-method="Test1">Test1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite1" title="com.raisin.demo.tests.RaisinTests" hash-for-method="Test2">Test2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-RegressionSuite1 -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,16 +119,6 @@
                       <a href="#" panel-name="suite-RegressionSuite1" class="show-methods passed suite-RegressionSuite1"> (show)</a> <!-- show-methods passed suite-RegressionSuite1 -->
                     </span>
                     <div class="method-list-content passed suite-RegressionSuite1">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite1" title="com.raisin.demo.tests.RaisinTests" hash-for-method="Test1">Test1</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite1" title="com.raisin.demo.tests.RaisinTests" hash-for-method="Test2">Test2</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite1" title="com.raisin.demo.tests.RaisinTests" hash-for-method="Test3(country-name-asc)">Test3(country-name-asc)</a> <!-- method navigator-link -->
@@ -127,9 +136,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-RegressionSuite1" class="panel RegressionSuite1">
-          <div class="suite-RegressionSuite1-class-passed">
+          <div class="suite-RegressionSuite1-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.raisin.demo.tests.RaisinTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -138,6 +147,37 @@
                   <a name="Test1">
                   </a> <!-- Test1 -->
                   <span class="method-name">Test1</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;select name=&quot;country_choice&quot; id=&quot;field-country_choice&quot; class=&quot;form-control form-control-big&quot;&gt;...&lt;/select&gt; is not clickable at point (653, 264). Other element would receive the click: &lt;span id=&quot;uc-full-optin-description&quot; tabindex=&quot;0&quot; style=&quot;display: inline;&quot;&gt;...&lt;/span&gt;
+  (Session info: chrome=86.0.4240.111)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.6.0&apos;, revision: &apos;6fbf3ec767&apos;, time: &apos;2017-09-27T15:28:36.4Z&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.178.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\lenovo\AppData\Local\Temp\scoped_dir9868_21579}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=86.0.4240.111, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 56e1f93108162b30a340321c4139ae11
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy10.click(Unknown Source)
+	at com.raisin.demo.utils.SeleniumUtil.selectbyValuesFromDropbox(SeleniumUtil.java:53)
+	at com.raisin.demo.pages.LaunchPage.selectCountryList(LaunchPage.java:41)
+	at com.raisin.demo.pages.LaunchPage.navigateToLoginPage(LaunchPage.java:36)
+	at com.raisin.demo.tests.RaisinTests.Test1(RaisinTests.java:40)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -145,8 +185,46 @@
                   <a name="Test2">
                   </a> <!-- Test2 -->
                   <span class="method-name">Test2</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;a class=&quot;nav-main-link&quot; href=&quot;https://www.raisin.com/our-offers/&quot;&gt;...&lt;/a&gt; is not clickable at point (370, 35). Other element would receive the click: &lt;div class=&quot;modal fade in&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; id=&quot;country_modal&quot; aria-hidden=&quot;false&quot; style=&quot;display: block;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=86.0.4240.111)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.6.0&apos;, revision: &apos;6fbf3ec767&apos;, time: &apos;2017-09-27T15:28:36.4Z&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.178.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\lenovo\AppData\Local\Temp\scoped_dir9868_21579}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=86.0.4240.111, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 56e1f93108162b30a340321c4139ae11
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy10.click(Unknown Source)
+	at com.raisin.demo.utils.SeleniumUtil.clickElementAssert(SeleniumUtil.java:121)
+	at com.raisin.demo.pages.LaunchPage.clickOurOffersLink(LaunchPage.java:47)
+	at com.raisin.demo.tests.RaisinTests.Test2(RaisinTests.java:60)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-RegressionSuite1-class-failed -->
+          <div class="suite-RegressionSuite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.raisin.demo.tests.RaisinTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="Test3(country-name-asc)">
@@ -214,22 +292,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Test2')
+data.setCell(0, 1, 'Test3')
 data.setCell(0, 2, 'com.raisin.demo.tests.RaisinTests')
-data.setCell(0, 3, 30268);
+data.setCell(0, 3, 32694);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Test1')
+data.setCell(1, 1, 'Test2')
 data.setCell(1, 2, 'com.raisin.demo.tests.RaisinTests')
-data.setCell(1, 3, 27500);
+data.setCell(1, 3, 9832);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'Test3')
+data.setCell(2, 1, 'Test1')
 data.setCell(2, 2, 'com.raisin.demo.tests.RaisinTests')
-data.setCell(2, 3, 25431);
+data.setCell(2, 3, 4269);
 window.suiteTableData['RegressionSuite1']= { tableData: data, tableDiv: 'times-div-RegressionSuite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 46 seconds</span>
               <div id="times-div-RegressionSuite1">
               </div> <!-- times-div-RegressionSuite1 -->
             </div> <!-- times-div -->
@@ -261,20 +339,24 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">Test1</span>
-                <span class="method-start">3129 ms</span>
+                <span class="method-start">3127 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">Test2</span>
-                <span class="method-start">30631 ms</span>
+                <span class="method-start">7404 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Test3(country-name-asc)</span>
-                <span class="method-start">60945 ms</span>
+                <span class="method-start">17268 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">86378 ms</span>
+                <span class="method-start">49962 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

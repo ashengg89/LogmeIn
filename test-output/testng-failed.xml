@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [RegressionSuite1]" parallel="tests">
+  <test thread-count="5" name="Regression1(failed)" parallel="tests">
     <classes>
       <class name="com.raisin.demo.tests.RaisinTests">
         <methods>
           <include name="Test1"/>
+          <include name="Test2"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.raisin.demo.tests.RaisinTests -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Regression1(failed) -->
+</suite> <!-- Failed suite [RegressionSuite1] -->

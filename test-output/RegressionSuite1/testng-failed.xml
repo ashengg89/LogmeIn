@@ -6,6 +6,7 @@
       <class name="com.raisin.demo.tests.RaisinTests">
         <methods>
           <include name="Test1"/>
+          <include name="Test2"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
